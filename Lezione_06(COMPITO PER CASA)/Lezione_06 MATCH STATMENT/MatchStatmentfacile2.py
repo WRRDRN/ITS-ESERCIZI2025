@@ -28,5 +28,5 @@ match Sesso:
     case "f":
         print(f"Nome: {Nome} \n Gender: Femmina")
     case _:
-        print(f"Nome: 
+        print(f"Nome: {Nome} \n Gender: Complimenti, non hai sesso")
 
