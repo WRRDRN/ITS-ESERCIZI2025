@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="risultato"></div>
+    
+
+ 
+    <script>
+        
+        function range(numero){
+            return numero >=1 && numero <= 7;
+
+        }
+
+        function giornate(){
+            let numero = document.getElementById("numero").value;
+            let risultato= document.getElementById("risultato");
+        }
+            if (range(numero)){
+                let giorni = ["Lunedì","Martedì","Mercoledì","Giovedi","Venerdi","Sabato","Domenica"]
+                risultato.innerHTML= "Il giorno corrispondente è: " +giornate[numero -1 ]
+         
+            } else{
+                risultato.innerHTML = "Peccato, non corrisponde a nessun giorno!"
+
+        }
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

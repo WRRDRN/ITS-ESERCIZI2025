@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Verifica Identicità</title>
+</head>
+<body>
+    <h1>Verifica se due valori sono identici</h1>
+
+    <p>Valore 1: <span id="val1"></span></p>
+    <p>Valore 2: <span id="val2"></span></p>
+
+    <div id="output"></div>
+
+    <script>
+        // Funzione per controllare se due valori sono identici (valore + tipo)
+        function uguaglianzaIdentica(a, b) {
+            return a === b;
+        }
+
+        // Esempio di valori da confrontare
+        let val1 = 5;
+        let val2 = 6;
+
+        // Visualizza i valori nella pagina
+        document.getElementById("val1").innerHTML= val1 + " (" + typeof val1 + ")";
+        document.getElementById("val2").innerHTML = val2 + " (" + typeof val2 + ")";
+
+        // Esegue il confronto
+        let risultato = uguaglianzaIdentica(val1, val2);
+
+        // Mostra il risultato nella pagina
+        document.getElementById("output").innerHTML = "Sono identici? " + risultato;
+    </script>
+</body>
+</html>
