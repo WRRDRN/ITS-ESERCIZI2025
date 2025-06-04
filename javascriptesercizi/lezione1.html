@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 8 processi asincroni</title>
+
+    <script>
+        //javascript : codice in modo "sincrono"...."procedurale"
+
+        let a = () => {
+            console.log(" SONO A");
+        }
+
+        let b = () => {
+            console.log("SONO B");
+
+
+            let x= new Promise((res,rej)=>{
+
+                setTimeout( () => {
+                console.log("STO RECUPERANDO GLI UTENTI DAL DATABASE")
+            } , 5000);//funzione asincrona "funzione del browser"
+            
+            return x;
+
+
+            })
+        }
+
+        let c = () => {
+            console.log("SONO C: calcolo il codice fiscale");
+        }
+
+        let d = () => {
+            console.log("SONO D: calcolo la busta paga");
+        }
+
+        let calcolo = () => {
+            a();
+            b().then((Risulatato))
+            c();
+            d();
+        }
+
+        calcolo();
+
+        //js è un linguaggio con 2 ambiente di esecuzione (js e il browser)
+        // ASINCRONO... viene eseguito in un altro ambiente (browser o node.js)
+
+        //setTimeout() funzione del browser no di js.
+        
+        console.log("FINE")
+
+        // A - B - C - D - FINE - UTENTI
+    </script>
+
+</head>
+<body>
+
+    <h1>web 2</h1>
+
+
+   
+</body>
+</html>

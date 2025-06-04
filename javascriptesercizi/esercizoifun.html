@@ -13,23 +13,23 @@
     <div id="output"></div>
 
     <script>
-        // Funzione per controllare se due valori sono identici (valore + tipo)
+        //(valore + tipo)
         function uguaglianzaIdentica(a, b) {
             return a === b;
         }
 
-        // Esempio di valori da confrontare
+        // confronto
         let val1 = 5;
         let val2 = 6;
 
-        // Visualizza i valori nella pagina
+        // visualizza valori
         document.getElementById("val1").innerHTML= val1 + " (" + typeof val1 + ")";
         document.getElementById("val2").innerHTML = val2 + " (" + typeof val2 + ")";
 
-        // Esegue il confronto
+        //confronto
         let risultato = uguaglianzaIdentica(val1, val2);
 
-        // Mostra il risultato nella pagina
+        // risultato 
         document.getElementById("output").innerHTML = "Sono identici? " + risultato;
     </script>
 </body>

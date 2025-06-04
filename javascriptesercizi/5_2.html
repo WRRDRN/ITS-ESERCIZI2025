@@ -1,69 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Giorno della Settimana</title>
 </head>
 <body>
 
+    <h1>Inserisci un numero da 1 a 7</h1>
+    <input type="number" id="numero" min="1" max="7">
+    <button onclick="giornate()">Verifica</button>
 
     <div id="risultato"></div>
-    
 
- 
     <script>
-        
-        function range(numero){
-            return numero >=1 && numero <= 7;
-
+        function range(numero) {
+            return numero >= 1 && numero <= 7;
         }
 
-        function giornate(){
-            let numero = document.getElementById("numero").value;
-            let risultato= document.getElementById("risultato");
+        function giornate() {
+            let numero = parseInt(document.getElementById("numero").value);
+            let risultato = document.getElementById("risultato");
+            let giorni = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
+
+            if (range(numero)) {
+                risultato.innerHTML = "Il giorno corrispondente è: " + giorni[numero - 1];
+            } else {
+                risultato.innerHTML = "Peccato, non corrisponde a nessun giorno!";
+            }
         }
-            if (range(numero)){
-                let giorni = ["Lunedì","Martedì","Mercoledì","Giovedi","Venerdi","Sabato","Domenica"]
-                risultato.innerHTML= "Il giorno corrispondente è: " +giornate[numero -1 ]
-         
-            } else{
-                risultato.innerHTML = "Peccato, non corrisponde a nessun giorno!"
-
-        }
-        
-
-
-
-
-
-
     </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
