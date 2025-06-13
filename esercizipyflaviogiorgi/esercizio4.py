@@ -5,8 +5,9 @@
 
 def combo(x:bool,y:bool,z:bool)-> str:
     if x and (y or z) :
-        return("Azione permessa")
+        print("Azione permessa")
     else:
-        return("Azione negata")
+        print("Azione negata")
 
-print(combo)
+print(combo(False,False,False))
+
